@@ -1,16 +1,16 @@
 import unittest
 from BattleArea import BattleArea
-class TestBattleField(unittest.TestCase):
+class TestBattleArea(unittest.TestCase):
 
 	def test_battlefield_returns_correct_result(self):
-		test_battlefield = BattleArea(4, 'E')
-		test_battlefield.createBattleArea()
-		self.assertNotEqual([
+		test_battleArea = BattleArea(4, 'D')
+		test_battleArea.createBattleArea()
+		self.assertEqual([
 			[0, 0, 0, 0],
 			[0, 0, 0, 0],
 			[0, 0, 0, 0],
 			[0, 0, 0, 0]
-		], test_battlefield.battleArea)
+		], test_battleArea.battleArea)
 
 if __name__ == '__main__':
 	unittest.main() 
