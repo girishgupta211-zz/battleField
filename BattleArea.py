@@ -23,4 +23,3 @@ class BattleArea():
 
 	def createBattleArea(self):
 		self.battleArea = [ [0 for i in xrange(self.maxX)] for i in xrange(self.maxY) ]
-
