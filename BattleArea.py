@@ -3,14 +3,14 @@ from pprint import pprint
 
 def validateRange(func):
 	""" Decortaor used to validate X and Y range  """
-	def inner_func(self,X, Y):
-		if X > 9:
-			raise Exception("M needs to be less than 9")		
+	def checkBounds(self,X, Y):
+		if X > 9 or X < 1:
+			raise Exception("M needs to be less than 9 and greater than 0")		
 		if( Y not in list(string.ascii_uppercase)):
 			raise Exception( "N should be between 'A' and 'Z' (Capital letter Only)" )		
 		
 		return func(self,X,Y)
-	return inner_func
+	return checkBounds
 
 
 class BattleArea():

@@ -2,6 +2,9 @@ from ast import literal_eval
 from BattleShip import BattleShip
 
 class Utils():
+	"""
+	Simple utility function used across all the classes
+	"""
 	@staticmethod
 	def convertToCartesian(targetLocations):
 		return [ (ord(location[0]) - 64 , location[1]) for location in targetLocations]

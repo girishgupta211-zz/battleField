@@ -1,10 +1,17 @@
 from BattleArea import BattleArea
 class BattleField(BattleArea):
+	""" This class is used to create battle field with battle ships
+		It is having a attribute totalPower which shows total power of batter field
+		whcih is sum of power of all active cell where 
+		battle ships are kept(1 for P and 2 for Q type) """
 	totalPower = 0
 	def __init__(self, m,n,battleShipArry):
 		BattleArea.__init__(self,m,n)
+		self.battleArea
+		self.totalPower
 		self.createBattleArea()		
 		self.populateBattleField(battleShipArry)
+
 	
 	def populateBattleField(self,battleShipArry):		
 		for tank in battleShipArry:

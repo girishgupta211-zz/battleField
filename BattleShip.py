@@ -1,5 +1,5 @@
 def validateBattleShip(func):
-	def inner_func(self,location, dimention, type,maxX,maxY ):		
+	def checkBounds(self,location, dimention, type,maxX,maxY ):		
 		x =ord(location[0]) - 64
 		y = location[1]		
 
@@ -7,10 +7,14 @@ def validateBattleShip(func):
 			raise Exception("battleShip should be within battle field dimention of " + str(maxX) + " by " + str(maxY))
 	
 		return func(self,location,dimention,type,maxX,maxY)
-	return inner_func
+	return checkBounds
 
 
 class BattleShip():
+	""" This class is used to create battle ship objects of a given dimention, type 
+		and location. It checks the bondry of individual ship so that it is within 
+		battle field """
+
 	@validateBattleShip
 	def __init__(self, location, dimention,type,maxX,maxY):				
 		self.location = location
