@@ -1,5 +1,5 @@
 from Utils import Utils
-class Player():
+class Player(object):
 	"""
 	This represents a player. Each player own a battle Field 
 	and target missiles that would be hit on opponent 
@@ -59,7 +59,7 @@ class Player():
 		"""
 			Start game with player1. play in infinite loop, till either missiles are finished from both side
 			or total power is 0 of any player
-		"""
+		"""	
 		currPlayer = 1	
 
 		while(True):

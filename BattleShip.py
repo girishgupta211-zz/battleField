@@ -10,7 +10,7 @@ def validateBattleShip(func):
 	return checkBounds
 
 
-class BattleShip():
+class BattleShip(object):
 	""" This class is used to create battle ship objects of a given dimention, type 
 		and location. It checks the bondry of individual ship so that it is within 
 		battle field """

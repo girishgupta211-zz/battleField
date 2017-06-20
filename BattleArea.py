@@ -13,13 +13,14 @@ def validateRange(func):
 	return checkBounds
 
 
-class BattleArea():
+class BattleArea(object):
 	""" This class is used to create an empty battle Area(battleArea) with MXN Grid with zeors   """
 	@validateRange	
 	def __init__(self,maxX,maxY):		
 		self.maxX = maxX
-		self.maxY = ord(maxY) - 64
-		self.battleArea = None
+		self.maxY = ord(maxY) - 64 # convert Alphabet to number so that it can be easily processed as array
+		self.battleArea = []
+		self.totalPower = 0
 
 	def createBattleArea(self):
 		self.battleArea = [ [0 for i in xrange(self.maxX)] for i in xrange(self.maxY) ]
