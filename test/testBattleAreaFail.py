@@ -1,10 +1,10 @@
 import unittest
-from BattleArea import BattleArea
-class TestBattleArea(unittest.TestCase):
+from BattleAreaBase import BattleAreaBase
+class TestBattleAreaBase(unittest.TestCase):
 
 	def test_battlearea_returns_correct_result(self):
-		test_battleArea = BattleArea(4, 'E')
-		test_battleArea.createBattleArea()
+		test_battleArea = BattleAreaBase(4, 'E')
+		test_battleArea.createBattleAreaBase()
 		self.assertNotEqual([
 			[0, 0, 0, 0],
 			[0, 0, 0, 0],
