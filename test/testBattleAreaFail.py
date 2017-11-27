@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append('../')
 from BattleAreaBase import BattleAreaBase
 class TestBattleAreaBase(unittest.TestCase):
 
